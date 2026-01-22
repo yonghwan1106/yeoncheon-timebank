@@ -259,6 +259,7 @@ export function Header() {
 
 const navItems = [
   { href: '/', label: '대시보드', icon: '📊' },
+  { href: '/about', label: '소개', icon: 'ℹ️' },
   { href: '/services', label: '봉사 서비스', icon: '🤝' },
   { href: '/wallet', label: '크레딧 지갑', icon: '💳' },
   { href: '/programs', label: '프로그램', icon: '📚' },

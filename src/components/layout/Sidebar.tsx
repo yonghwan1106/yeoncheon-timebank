@@ -14,6 +14,7 @@ import {
   Blocks,
   Trophy,
   Smartphone,
+  Info,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuthStore } from '@/store/authStore';
@@ -29,6 +30,7 @@ const mainNavItems = [
 ];
 
 const secondaryNavItems = [
+  { href: '/about', label: '프로젝트 소개', icon: Info },
   { href: '/leaderboard', label: '리더보드', icon: Trophy },
   { href: '/blockchain', label: '블록체인', icon: Blocks },
   { href: '/community', label: '커뮤니티', icon: Users },
