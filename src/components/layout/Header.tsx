@@ -82,6 +82,12 @@ export function Header() {
               연천 타임뱅크
             </span>
           </Link>
+
+          {/* 공모전 출품작 표시 */}
+          <div className="hidden md:flex items-center gap-1.5 ml-2 px-2.5 py-1 bg-amber-50 border border-amber-200 rounded-full">
+            <span className="text-sm">🏆</span>
+            <span className="text-xs font-medium text-amber-700">2025 공모전 출품작</span>
+          </div>
         </div>
 
         {/* Desktop Nav */}
@@ -173,14 +179,7 @@ export function Header() {
               className="flex items-center gap-2 px-2"
               onClick={() => setShowUserMenu(!showUserMenu)}
             >
-              <Avatar className="h-8 w-8">
-                <AvatarImage src={currentUser.avatar} />
-                <AvatarFallback>{currentUser.name[0]}</AvatarFallback>
-              </Avatar>
-              <div className="hidden sm:block text-left">
-                <p className="text-sm font-medium">{currentUser.name}</p>
-                <p className="text-xs text-gray-500">Lv.{currentUser.level}</p>
-              </div>
+              <span className="text-sm font-medium">{currentUser.name}</span>
             </Button>
 
             <AnimatePresence>
