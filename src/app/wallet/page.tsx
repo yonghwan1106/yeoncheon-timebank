@@ -29,17 +29,9 @@ export default function WalletPage() {
   const transactions = getTransactionsByUser(user.id);
   const blockchainStats = getBlockchainStats();
 
-  // 애니메이션으로 잔액 표시
+  // 애니메이션으로 잔액 표시 (마운트 시 1회만 실행)
   useEffect(() => {
-    const earnedCredits = transactions
-      .filter((t) => t.toUserId === user.id && (t.type === 'earn' || t.type === 'bonus'))
-      .reduce((sum, t) => sum + t.amount, 0);
-
-    const spentCredits = transactions
-      .filter((t) => t.fromUserId === user.id && t.type === 'spend')
-      .reduce((sum, t) => sum + t.amount, 0);
-
-    const actualBalance = user.totalCredits || earnedCredits - spentCredits;
+    const actualBalance = user.totalCredits;
     setBalance(actualBalance);
 
     // 숫자 카운트업 애니메이션
@@ -56,7 +48,7 @@ export default function WalletPage() {
     }, 20);
 
     return () => clearInterval(timer);
-  }, [user.id, user.totalCredits, transactions]);
+  }, []);
 
   return (
     <div className="space-y-6">
