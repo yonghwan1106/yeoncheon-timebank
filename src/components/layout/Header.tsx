@@ -86,7 +86,7 @@ export function Header() {
           {/* 공모전 출품작 표시 */}
           <div className="hidden md:flex items-center gap-1.5 ml-2 px-2.5 py-1 bg-amber-50 border border-amber-200 rounded-full">
             <span className="text-sm">🏆</span>
-            <span className="text-xs font-medium text-amber-700">2025 공모전 출품작</span>
+            <span className="text-xs font-medium text-amber-700">연천군 테마형 아이디어 공모전 출품작</span>
           </div>
         </div>
 
