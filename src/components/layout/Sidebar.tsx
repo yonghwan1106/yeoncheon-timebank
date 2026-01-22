@@ -63,10 +63,10 @@ export function Sidebar() {
           </div>
 
           {/* 크레딧 정보 */}
-          <div className="mt-3 flex items-center justify-between">
-            <span className="text-sm text-gray-600">보유 크레딧</span>
-            <span className="text-lg font-bold text-primary">
-              {currentUser.totalCredits} TC
+          <div className="mt-3 flex items-center justify-between bg-white/60 rounded-lg px-3 py-2">
+            <span className="text-sm text-gray-700 font-medium">보유 크레딧</span>
+            <span className="text-xl font-bold text-gray-900">
+              {currentUser.totalCredits} <span className="text-sm text-primary font-semibold">TC</span>
             </span>
           </div>
         </div>
